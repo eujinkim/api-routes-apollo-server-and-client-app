@@ -53,3 +53,17 @@ On initial page load, while on the server and inside `getInitialProps`, we invok
 
 Note: Do not be alarmed that you see two renders being executed. Apollo recursively traverses the React render tree looking for Apollo query components. When it has done that, it fetches all these queries and then passes the result to a cache. This cache is then used to render the data on the server side (another React render).
 https://www.apollographql.com/docs/react/api/react-ssr/#getdatafromtree
+
+### Updated
+
+- Modified to use Neo4j database running locally (tested) or on cloud based on [GRAND stack starter project](https://github.com/grand-stack/grand-stack-starter)
+- Uses Apollo server micro, not express server as in the starter project 
+    - https://github.com/zeit/next.js/issues/9397
+- `/api/graphql` for testing with API
+
+### TODO
+
+- Copy `/seed` from GRAND stack starter project and seed command
+- Run on Sandbox
+- Deploy to Micro
+- Deploy to AWS Lambda?

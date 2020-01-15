@@ -3,25 +3,29 @@ import gql from 'graphql-tag'
 import Link from 'next/link'
 import { useQuery } from '@apollo/react-hooks'
 
-const ViewerQuery = gql`
-  query ViewerQuery {
-    viewer {
-      id
+const User = gql`
+  query UserQuery {
+    User {
       name
-      status
     }
   }
 `
 
 const Index = () => {
   const {
-    data: { viewer },
-  } = useQuery(ViewerQuery)
+    data: { User: users }
+  } = useQuery(User)
 
-  if (viewer) {
+  if (users) {
     return (
       <div>
-        You're signed in as {viewer.name} and you're {viewer.status} goto{' '}
+        <ul>
+          { users.map((user => {
+              return (
+                <li key={user.name}>{user.name}</li>
+              )
+          })) }
+        </ul>
         <Link href="/about">
           <a>static</a>
         </Link>{' '}
