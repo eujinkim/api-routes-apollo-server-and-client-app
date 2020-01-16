@@ -65,5 +65,14 @@ https://www.apollographql.com/docs/react/api/react-ssr/#getdatafromtree
 
 - Copy `/seed` from GRAND stack starter project and seed command
 - Run on Sandbox
-- Deploy to Micro
+    - https://neo4j.com/sandbox-v2/#
+    - `.env`
+        - Replace to `NEO4J_URI=bolt://34.207.155.159:32854` where IP address is `34.207.155.159` and Bolt port is `32854`
+- Deploy to Zeit / Micro
+    - `now`
+    - https://zeit.co/docs/v2/serverless-functions/env-and-secrets
+        - Runtime env variables. Accessible via `process.env.ENV_NAME`
+        - `.env` only for local development
+        - `now.json`. PW should be used with secrets. For simplicity, they are added as env vars
 - Deploy to AWS Lambda?
+
