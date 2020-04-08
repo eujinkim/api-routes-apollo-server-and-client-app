@@ -6,7 +6,9 @@ import { useQuery } from '@apollo/react-hooks'
 const User = gql`
   query UserQuery {
     User {
+      id
       name
+      avgStars
     }
   }
 `
@@ -17,6 +19,8 @@ const Index = () => {
   } = useQuery(User)
 
   if (users) {
+    console.log('users', users)
+
     return (
       <div>
         <ul>

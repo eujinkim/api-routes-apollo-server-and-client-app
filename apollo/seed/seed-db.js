@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import seedmutations from "./seed-mutations.js";
 import fetch from "node-fetch";
 import { HttpLink } from "apollo-link-http";
-import { InMemoryCache } from "apollo-cache-inmemory";
+import { InMemoryCache } from "apollo-cache-inmemory"; // what does this do?
 
 dotenv.config();
 
