@@ -2,7 +2,7 @@
 /**
  * from grand-stack-starter
  */
-import { v1 as neo4j } from "neo4j-driver";
+import neo4j from "neo4j-driver";
 import { schema } from "../../apollo/schema";
 import dotenv from "dotenv";
 /**
